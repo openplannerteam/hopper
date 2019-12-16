@@ -1,0 +1,35 @@
+@font-face {
+  font-family: Livvic;
+  font-weight: 400;
+  font-style: normal;
+  src:
+    url("../assets/fonts/regular.woff2") format("woff2"),
+    url("../assets/fonts/regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: Livvic;
+  font-weight: 500;
+  font-style: normal;
+  src:
+    url("../assets/fonts/medium.woff2") format("woff2"),
+    url("../assets/fonts/medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: Livvic;
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url("../assets/fonts/semiBold.woff2") format("woff2"),
+    url("../assets/fonts/semiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: Livvic;
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../assets/fonts/bold.woff2") format("woff2"),
+    url("../assets/fonts/bold.woff") format("woff");
+}

@@ -1,0 +1,12 @@
+@import "~styles/config";
+
+.map {
+  position: fixed;
+  right: 0;
+  left: 0;
+
+  @media screen and (min-width: $min-tablet) {
+    flex-basis: calc(100% / 3 * 2);
+    position: relative;
+  }
+}

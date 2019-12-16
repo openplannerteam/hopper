@@ -1,0 +1,40 @@
+#zoomIn, #zoomOut {
+    width: 40px !important;
+    height: 40px !important;
+    border: none !important;
+    outline: none;
+    background: transparent !important;
+    color: transparent;
+    position: relative;
+  }
+#zoomIn{
+  &:before, &:after{
+    content: '';
+    width: 45%;
+    height: 3px;
+    display: block;
+    border-radius: 50px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  &:after{
+    transform: translate(-50%, -50%) rotate(90deg)
+  }
+}
+#zoomOut{
+  &:before{
+    content: '';
+    width: 45%;
+    height: 3px;
+    display: block;
+    border-radius: 50px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}

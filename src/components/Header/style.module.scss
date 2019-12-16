@@ -1,0 +1,25 @@
+@import "~styles/config";
+
+.logo {
+  display: inline-flex;
+  place-items: center;
+  place-content: center;
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+
+  &__graphics {
+    display: block;
+    position: relative;
+  }
+
+  &__title {
+    position: absolute;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    clip-path: inset(0 0 99.9% 99.9%);
+  }
+}

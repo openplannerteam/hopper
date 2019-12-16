@@ -1,0 +1,126 @@
+@import '~styles/config';
+
+.leaveAtTimeModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-image: radial-gradient(circle at top, rgba($color-light, 0.2) 0%, rgba($color-dark, 0.2) 100%);
+  padding: 16px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  .leaveAtTimeModalContent {
+    position: relative;
+    padding: 24px 16px;
+    width: 100%;
+    border-radius: 12px;
+    background-color: $color-background;
+    box-shadow: 0 2px 4px 0 rgba($color-dark, 0.04), 0 6px 16px 0 rgba($color-dark, 0.1);
+
+    @media screen and (min-width: $min-tablet) {
+      margin: 0 auto;
+      width: calc(100% / 3);
+    }
+
+    .closeButton {
+      display: block;
+      position: absolute;
+      z-index: 2;
+      top: -58px;
+      right: 0;
+      height: 42px;
+      width: 42px;
+      cursor: pointer;
+      border: 0;
+      border-radius: 100%;
+      background: url('../../assets/images/icon-close.svg') center no-repeat, $color-background;
+      outline: none;
+      text-indent: -10000000px;
+      box-shadow: 0 4px 16px -8px rgba($color-dark, 0.3);
+    }
+  }
+
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+
+    .momentButton {
+      border: 2px solid $color-green;
+      flex-basis: 50%;
+      background: $color-background;
+      font-family: $font-family;
+      padding: 7px 0 9px;
+      font-size: 16px;
+      font-weight: $font-semibold;
+      outline: none;
+      cursor: pointer;
+      margin: 0;
+      color: $color-green;
+
+      &:first-child {
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+    }
+
+    .active {
+      background: $color-green;
+      color: $color-light;
+    }
+  }
+
+  .modalSubmitButton {
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    background: rgb(92, 230, 92);
+    font-family: $font-family;
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(92, 230, 92, 0.8);
+    }
+  }
+
+  .mobileDatePicker {
+    display: block;
+    position: absolute;
+    z-index: -10000;
+    width: 0;
+    height: 0;
+  }
+
+  .mobileDatePickerLabel {
+    display: block;
+    text-indent: -100000px;
+  }
+
+  .nowButton {
+    margin: 8px 0;
+    padding: 12px 0;
+    width: 100%;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: $font-semibold;
+    color: $color-green;
+    border: 2px solid $color-green;
+    border-radius: 12px;
+    background: #fff;
+  }
+}
+
+.leaveAtTimeModal.desktop{
+  position: absolute;
+}

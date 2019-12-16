@@ -1,0 +1,51 @@
+@import "~styles/config";
+
+.homeMenu {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 -6px 16px 0 rgba(0,0,0,0.10);
+
+  a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    color: #000;
+  }
+
+  .whereToButton {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    padding-left: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    flex: 1 0;
+
+    &:before {
+      content: "";
+      height: 24px;
+      width: 24px;
+      display: block;
+      margin-right: 15px;
+      background: url('../../assets/images/search_icon.svg') center no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .menuButton {
+    width: 26px;
+    height: 26px;
+    display: block;
+    align-self: center;
+    position: relative;
+    text-indent: -100000px;
+    margin-right: 20px;
+    background: url('../../assets/images/settings-icon.svg') center no-repeat;
+    background-size: 100%;
+  }
+}

@@ -1,0 +1,121 @@
+@import "~styles/config";
+
+.routing {
+  padding-top: 8px;
+  overflow: hidden;
+  pointer-events: all;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  background-color: $color-green;
+  box-shadow: 0 -2px 8px -2px rgba($color-dark, 0.05), 0 -8px 32px -2px rgba($color-dark, 0.1);
+
+  @media screen and (min-width: $min-tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  &__handleBar {
+    margin: 0 auto;
+    margin-bottom: 16px;
+    height: 3px;
+    width: 48px;
+    border-radius: 3px;
+    background-color: rgba($color-background, 0.5);
+
+    @media screen and (min-width: $min-tablet) {
+      visibility: hidden;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-bottom: 22px;
+    padding: 0 16px;
+    width: 100%;
+    color: $color-light;
+
+    &__cell {
+      padding-right: 8px;
+      width: 25%;
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &__label {
+        margin-bottom: -4px;
+        font-weight: $font-bold;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      &__info {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__itinerary {
+    padding: 24px 16px;
+    // default padding + tabs + tabs dynamic bottom padding
+    padding-bottom: calc(16px + 54px + env(safe-area-inset-bottom, 16px));
+    // viewport - logo (with top/bottom spacing) - header
+    max-height: calc(100vh - 91px - 90px);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: $color-background;
+    overflow-y: scroll;
+
+    @media screen and (min-width: $min-tablet) {
+      flex-grow: 1;
+      max-height: none;
+      border-radius: 0;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom, 16px);
+    font-size: 12px;
+    font-weight: $font-semibold;
+    color: $color-background;
+    cursor: pointer;
+    background-color: $color-green;
+
+    @media screen and (min-width: $min-tablet) {
+      width: calc(100% / 3);
+    }
+
+    &__item {
+      padding: 12px 0 11px;
+      width: calc(100% / 3);
+      text-align: center;
+
+      &--active {
+        background-color: rgba($color-background, 0.2);
+      }
+
+      &__icon {
+        display: flex;
+        place-items: center;
+        place-content: center;
+        margin: 0 auto;
+        height: 15px;
+      }
+
+      &__label {
+        font-size: 12px;
+        font-weight: $font-semibold;
+      }
+    }
+  }
+}

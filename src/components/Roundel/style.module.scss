@@ -1,0 +1,13 @@
+@import "~styles/config";
+
+.default {
+  stroke: $color-green;
+}
+
+.train {
+  stroke: $color-blue;
+}
+
+.walk {
+  stroke: black;
+}

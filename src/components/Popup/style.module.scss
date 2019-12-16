@@ -1,0 +1,391 @@
+@import "~styles/config";
+
+.popup {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(circle at top, rgba($color-light, 0.3) 0%, rgba($color-dark, 0.3) 100%);
+  animation: bgFadeIn 200ms linear both;
+
+  &__container {
+    flex-grow: 1;
+    margin: 16px;
+    padding: 32px 24px 24px;
+    border-radius: 12px;
+    background-color: $color-background;
+    box-shadow: 0 2px 4px 0 rgba($color-dark, 0.04), 0 6px 16px 0 rgba($color-dark, 0.1);
+    animation: bounceIn 1000ms linear both;
+
+    @media screen and (min-width: $min-tablet) {
+      max-width: calc(100% / 3);
+    }
+
+    &--loader {
+      padding: 42px 32px 46px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 21px;
+    font-size: 18px;
+    font-weight: $font-semibold;
+    text-align: center;
+  }
+
+  &__body {
+    margin-bottom: 42px;
+    line-height: 1.5;
+    text-align: center;
+    white-space: pre-line;
+  }
+
+  &__btn {
+    position: relative;
+  }
+
+  &__animation {
+    margin-top: 42px;
+    height: 121px;
+
+    &__sky {
+      position: relative;
+      margin: 0 auto;
+      height: 59px;
+      width: 197px;
+    }
+
+    &__cloud {
+      position: absolute;
+      width: 88px;
+      height: 24px;
+      border-radius: 24px;
+      background-color: rgba($color-green, 0.1);
+
+      &:nth-child(1) {
+        top: 0;
+        left: 41px;
+        // animation: cloudMovement 8s cubic-bezier(0.2, 1, 0.25, 1) 0s infinite normal both;
+        animation: cloudMovement1 8s ease-in-out 0s infinite normal both;
+      }
+
+      &:nth-child(2) {
+        top: 16px;
+        left: 16px;
+        background-color: rgba($color-green, 0.2);
+        animation: cloudMovement2 8s ease-in-out 0s infinite normal both;
+      }
+
+      &:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        animation: cloudMovement3 8s ease-in-out 0s infinite normal both;
+      }
+    }
+
+    &__bikeContainer {
+      position: relative;
+      margin: 20px auto 0;
+      width: 66px;
+      animation: bikeMovement 16s ease-in-out 0s infinite normal both;
+
+      &__trails {
+        position: absolute;
+        top: 7px;
+        left: -15px;
+        height: 21px;
+        width: 21px;
+      }
+
+      &__trail {
+        position: absolute;
+        height: 3.5px;
+        border-radius: 10px;
+        background-color: $color-green;
+      }
+
+      &__trail:nth-child(1) {
+        right: 0;
+        width: 21px;
+        animation: trailMovement1 4s ease-in-out 0s infinite normal both;
+      }
+
+      &__trail:nth-child(2) {
+        top: 9px;
+        right: 8.5px;
+        width: 18px;
+        animation: trailMovement2 4s ease-in-out 0s infinite normal both;
+      }
+
+      &__trail:nth-child(3) {
+        top: 18px;
+        right: 8.5px;
+        width: 14px;
+        animation: trailMovement3 4s ease-in-out 0s infinite normal both;
+      }
+
+      &__bike {
+        height: 40px;
+        width: 66px;
+        fill: $color-green;
+      }
+    }
+
+    &__road {
+      height: 2px;
+      width: 100%;
+      border-radius: 2px;
+      background-color: rgba($color-green, 0.1);
+    }
+  }
+
+  &__fact {
+    margin-top: 26px;
+
+    &__title {
+      font-size: 12px;
+      font-weight: $font-bold;
+      color: $color-green;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__content {
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: $font-medium;
+      text-align: center;
+      line-height: 18px;
+    }
+  }
+}
+
+@keyframes bgFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Generated with Bounce.js. */
+@keyframes bounceIn {
+  0% {
+    transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  4.2% {
+    transform: matrix3d(0.549, 0, 0, 0, 0, 0.549, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  8.31% {
+    transform: matrix3d(0.884, 0, 0, 0, 0, 0.884, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  12.51% {
+    transform: matrix3d(1.032, 0, 0, 0, 0, 1.032, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  16.62% {
+    transform: matrix3d(1.063, 0, 0, 0, 0, 1.063, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  27.73% {
+    transform: matrix3d(1.013, 0, 0, 0, 0, 1.013, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  38.84% {
+    transform: matrix3d(0.997, 0, 0, 0, 0, 0.997, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  61.06% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  83.28% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+@keyframes cloudMovement1 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-14px, 2px);
+  }
+
+  50% {
+    transform: translate(8px, -1px);
+  }
+
+  75% {
+    transform: translate(-8px, 1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cloudMovement2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  20% {
+    transform: translate(-8px, 1px);
+  }
+
+  60% {
+    transform: translate(4px, 0);
+  }
+
+  80% {
+    transform: translate(-12px, -1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes cloudMovement3 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-12px, 1.5px);
+  }
+
+  50% {
+    transform: translate(10px, -1px);
+  }
+
+  75% {
+    transform: translate(-4px, 2px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes bikeMovement {
+  0% {
+    transform: translateX(0);
+  }
+
+  12.5% {
+    transform: translateX(44px);
+  }
+
+  25% {
+    transform: translateX(-12px);
+  }
+
+  37.5% {
+    transform: translateX(16px);
+  }
+
+  50% {
+    transform: translateX(-32px);
+  }
+
+  62.5% {
+    transform: translateX(24px);
+  }
+
+  75% {
+    transform: translateX(12px);
+  }
+
+  87.5% {
+    transform: translateX(-8px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes trailMovement1 {
+  0% {
+    width: 21px;
+  }
+
+  25% {
+    width: 12px;
+  }
+
+  50% {
+    width: 18px;
+  }
+
+  75% {
+    width: 13px;
+  }
+
+  100% {
+    width: 21px;
+  }
+}
+
+@keyframes trailMovement2 {
+  0% {
+    width: 18px;
+  }
+
+  20% {
+    width: 6px;
+  }
+
+  40% {
+    width: 16px;
+  }
+
+  60% {
+    width: 12px;
+  }
+
+  80% {
+    width: 8px;
+  }
+
+  100% {
+    width: 18px;
+  }
+}
+
+@keyframes trailMovement3 {
+  0% {
+    width: 14px;
+  }
+
+  25% {
+    width: 21px;
+  }
+
+  50% {
+    width: 8px;
+  }
+
+  75% {
+    width: 16px;
+  }
+
+  100% {
+    width: 14px;
+  }
+}

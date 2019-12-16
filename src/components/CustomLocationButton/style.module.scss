@@ -1,0 +1,26 @@
+@import "~styles/config";
+
+.customSelectionButtons {
+  display: block;
+  position: relative;
+  padding: 18px 0 19px;
+  padding-left: 48px;
+  color: $color-dark;
+  font-size: 18px;
+  font-weight: $font-semibold;
+  border-radius: 8px;
+  text-decoration: none;
+  background-color: $color-background;
+  box-shadow: 0 6px 16px -4px rgba($color-dark, 0.1);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+  }
+}

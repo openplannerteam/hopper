@@ -1,0 +1,57 @@
+{
+    "helloworld_title": "Time to code! 🚀",
+    "where_to_placeholder": "Search a place...",
+    "from_placeholder": "Departure",
+  	"to_placeholder": "Destination",
+    "find_your_route_button": "Find your route",
+    "search_placeholder": "Where to?",
+    "travel_mode_at": "at",
+    "travel_mode_by": "by",
+    "travel_mode_on": "on",
+    "travel_mode_arrive": "Arrive",
+    "travel_mode_leave": "Leave",
+    "arriveby_button": "Arrive by",
+    "leaveat_button": "Leave at",
+    "departure_arriveby": "Arrive",
+    "departure_leaveat": "Leave",
+    "trip_time": "Trip time",
+    "cycle_time": "Cycle time",
+    "trains": "Trains",
+    "facilities": "Facilities",
+    "POIs": "Points of interest",
+    "stops": "Stops",
+    "search_results": "Search results",
+    "past_searches": "Previous searches",
+    "current_location": "Your position",
+    "loader": {
+      "title": "We're fetching your itinerary.",
+      "fact_subtitle": "Fun Hopper fact",
+      "facts": {
+        "0": "Secrety secret: e-bikes can be charged.",
+        "1": "E-bikes can efficiently replace car trips.",
+        "2": "Casual riders are more likely to turn into daily users thanks to an e-bike.",
+        "3": "Did you know you can convert a bike into an e-bike?",
+        "4": "An e-bike is more likely to make you excercice more, since you'll go out more often.",
+        "5": "More battery, more weight. But with its help, you won't feel it."
+      }
+    },
+    "popup_results": {
+      "result_identical_title": "Identical travel time",
+      "result_identical": "It seems like an e-bike wouldn't help you to travel faster on this journey and at this time of that day.",
+      "result_ebike_faster_title": "Faster travel time",
+      "result_ebike_faster": "An e-bike would allow you to travel {{minutes}} minutes faster!",
+      "result_ebike_slower_title": "Slower travel time",
+      "result_ebike_slower": "It seems like a regular bike would allow you to travel slightly faster.",
+      "btn": "View my journeys"
+    },
+    "popup_network_error": {
+      "title": "Connection error",
+      "content": "It seems like an error occured while we tried to retrieve your itinerary.\nWe're sorry for the inconvenience.",
+      "btn": "OK"
+    },
+    "popup_empty_places_error": {
+      "title": "That won't work",
+      "content": "We need you to tell us from where you'll leave and where you'll head to 😁",
+      "btn": "OK"
+    }
+}

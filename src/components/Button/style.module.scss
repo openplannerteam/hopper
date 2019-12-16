@@ -1,0 +1,33 @@
+@import "~styles/config";
+
+.button {
+  @include reset-button;
+  padding: 11px 32px 13px;
+  color: $color-light;
+  font-family: $font-family;
+  font-size: 18px;
+  font-weight: $font-semibold;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: $color-green;
+  text-decoration: none;
+  transition: background-color 0.4s cubic-bezier(0.2, 1, 0.25, 1), color 0.4s cubic-bezier(0.2, 1, 0.25, 1), box-shadow 0.8s cubic-bezier(0.2, 1, 0.25, 1);
+
+  &--fullWidth {
+    display: flex;
+    flex-grow: 1;
+    place-content: center;
+    width: 100%;
+  }
+
+  &--ghost {
+    color: $color-green;
+    border: 2px solid $color-green;
+    border-radius: 12px;
+    background-color: $color-background;
+  }
+
+  &--bigger {
+    font-size: 20px;
+  }
+}

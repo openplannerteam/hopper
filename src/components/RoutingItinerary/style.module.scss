@@ -1,0 +1,95 @@
+@import "~styles/config";
+
+.itineraryLeg {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: -2px;
+
+  &__time {
+    font-weight: $font-semibold;
+    font-size: 18px;
+  }
+
+  &__graphics {
+    display: flex;
+    place-items: center;
+    place-content: center;
+    position: relative;
+    top: 2px;
+    margin: 0 8px;
+    margin-top: 2px;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__rightSide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      bottom: 0;
+      left: -17.75px;
+      width: 3px;
+      background-color: $color-green;
+      mask-image: url('../../assets/images/icon-repeat-trip-dots.svg');
+      mask-repeat: repeat-y;
+    }
+
+    &--train::before {
+      background-color: $color-blue;
+    }
+
+    &--walk::before {
+      background-color: black;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.375;
+
+    &__emphasis {
+      font-weight: $font-medium;
+    }
+  }
+
+  &__details {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 14px;
+
+    &__mode {
+      display: flex;
+      place-content: center;
+      place-items: center;
+      position: absolute;
+      top: 2px;
+      left: -23.5px;
+      height: 16px;
+      width: 16px;
+      background-color: $color-background;
+    }
+
+    &__description {
+      font-size: 14px;
+      color: $color-green;
+      line-height: 1.375;
+
+      &__emphasis {
+        font-weight: $font-medium;
+      }
+
+      &--train {
+        color: $color-blue;
+      }
+
+      &--walk {
+        color: black;
+      }
+    }
+  }
+}

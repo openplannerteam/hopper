@@ -1,0 +1,225 @@
+@import "~styles/config";
+
+.searchScreen {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100%;
+  background-color: $color-background;
+
+  @media screen and (min-width: $min-tablet) {
+    flex-basis: calc(100% / 3);
+    position: relative;
+    box-shadow: 0 -2px 8px -2px rgba($color-dark, 0.05), 0 -8px 32px -2px rgba($color-dark, 0.1);
+  }
+}
+
+.searchInput {
+  display: flex;
+  padding: 20px 32px 44px;
+  cursor: pointer;
+  background-color: $color-green;
+
+  /* stylelint-disable-next-line selector-max-type */
+  label {
+    align-self: center;
+    display: block;
+    margin-right: 14px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('../../assets/images/search_icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: invert(100%);
+    text-indent: -100000px; // TODO Avoid using labels hidden by text-indent. Consider using aria-label instead.
+  }
+
+  /* stylelint-disable-next-line selector-max-type */
+  input {
+    align-self: center;
+    flex-basis: calc(100% - 25px);
+    padding: 20px 0;
+    font-size: 24px;
+    color: $color-light;
+    font-family: $font-family;
+    font-weight: $font-semibold;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+
+    /* stylelint-disable-next-line selector-max-type */
+    &::placeholder {
+      color: rgba($color-light, 0.6);
+      font-weight: $font-semibold;
+      font-size: 24px;
+    }
+  }
+}
+
+.results {
+  @include reset-list;
+  margin-top: -16px;
+  margin-bottom: 32px;
+
+  p{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: $font-bold;
+    margin-bottom: 8px;
+    margin-top: 24px;    
+    padding-left: 64px;
+  }
+
+  /* stylelint-disable-next-line selector-max-type */
+  li {
+    line-height: 1;
+
+    /* stylelint-disable-next-line selector-max-type */
+    a {
+      display: block;
+      text-decoration: none;
+    }
+
+    /* stylelint-disable-next-line selector-max-type */
+    span {
+      display: block;
+      margin-top: 4px;
+      color: rgba($color-green, 0.5);
+      font-weight: $font-medium;
+      font-size: 12px;
+    }
+
+    button {
+      @include reset-button;
+      display: inline-block;
+      position: relative;
+      padding: 8px 0;
+      padding-left: 64px;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+
+      /* stylelint-disable-next-line selector-max-type */
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 34.5px;
+        width: 11px;
+        height: 22px;
+        background-image: url("../../assets/images/icon-pin.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .sncb {
+    background: url("../../assets/images/brand-nmbssncb.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .tec {
+    background: url("../../assets/images/brand-tec.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+
+  .delijn {
+    background: url("../../assets/images/brand-delijn.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .stib {
+    background: url("../../assets/images/brand-stibmivb.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+}
+
+.shortcutButtonsContainer {
+  position: relative;
+  bottom: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.homeWorkContainer {
+  display: flex;
+  justify-content: space-between;
+
+  .home,
+  .work {
+    flex-basis: 100%;
+    margin-top: 12px;
+  }
+
+  .home {
+    margin-right: 4px;
+
+    &::before {
+      background-image: url("../../assets/images/home-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .work {
+    margin-left: 4px;
+
+    &::before {
+      background: url("../../assets/images/work-icon.svg") center no-repeat;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.current_location {
+  margin: 0 16px;
+  transform: translateY(-50%);
+
+  &::before {
+    background-image: url("../../assets/images/icon-current-location.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+}
+
+.cancel_search {
+  position: fixed;
+  bottom: unquote("max(16px, env(safe-area-inset-bottom))");
+  @supports not (bottom: unquote("max()")) {
+    bottom: 16px;
+  }
+  margin: 0 16px;
+  width: calc(100% - 32px);
+  color: #2cd957;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid #2cd957;
+  border-radius: 12px;
+  background-color: #fff;
+
+  @media screen and (min-width: $min-tablet) {
+    width: calc((100% / 3) - 32px);
+  }
+}

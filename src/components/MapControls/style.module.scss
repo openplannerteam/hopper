@@ -1,0 +1,57 @@
+@import '~styles/config';
+
+.mapUIContainer {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  opacity: var(--mapui-opacity, 1);
+}
+
+.reCenterButton {
+  position: relative;
+  margin-bottom: 4px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 8px;
+  text-indent: -1000000px;
+  background-color: $color-background;
+  background-image: url('../../assets/images/location-icon.svg');
+  background-size: 50%;
+  background-position: 44% 54%;
+  background-repeat: no-repeat;
+  outline: none;
+  box-shadow: 0 2px 4px 0 rgba($color-dark, 0.04), 0 6px 16px 0 rgba($color-dark, 0.1) !important;
+}
+
+.zoomButtons{
+  width: 40px;
+  display: flex;
+  position: relative !important;
+  top: 0 !important;
+  right: 0 !important;
+  flex-direction: column;
+  border: 0 !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04), 0 6px 16px 0 rgba(0, 0, 0, 0.1) !important;
+  background: #fff;
+  margin-top: 4px;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    border-radius: 5px;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    background: $color-green;
+  }
+}
