@@ -3,7 +3,7 @@ import moment from 'moment';
 import Roundel from 'components/Roundel';
 import { ReactComponent as Bike } from 'assets/images/icon-trip-bike.svg';
 import { ReactComponent as Train } from 'assets/images/icon-trip-train.svg';
-import { ReactComponent as Walk } from 'assets/images/trip-walk.svg';
+import { ReactComponent as Walk } from 'assets/images/icon-trip-walk.svg';
 import genMainInstructionString from './instructionString';
 import genDetailedInstructionString from './detailedInstructionString';
 

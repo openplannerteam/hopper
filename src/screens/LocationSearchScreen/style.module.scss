@@ -65,13 +65,14 @@
   margin-top: -16px;
   margin-bottom: 32px;
 
-  p{
-    text-transform: uppercase;
+  /* stylelint-disable-next-line selector-max-type */
+  p {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    padding-left: 64px;
     font-size: 14px;
     font-weight: $font-bold;
-    margin-bottom: 8px;
-    margin-top: 24px;    
-    padding-left: 64px;
+    text-transform: uppercase;
   }
 
   /* stylelint-disable-next-line selector-max-type */
@@ -121,34 +122,6 @@
       }
     }
   }
-
-  .sncb {
-    background: url("../../assets/images/brand-nmbssncb.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  .tec {
-    background: url("../../assets/images/brand-tec.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-  }
-
-  .delijn {
-    background: url("../../assets/images/brand-delijn.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  .stib {
-    background: url("../../assets/images/brand-stibmivb.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-  }
 }
 
 .shortcutButtonsContainer {
@@ -156,40 +129,6 @@
   bottom: 0;
   padding: 0;
   width: 100%;
-}
-
-
-.homeWorkContainer {
-  display: flex;
-  justify-content: space-between;
-
-  .home,
-  .work {
-    flex-basis: 100%;
-    margin-top: 12px;
-  }
-
-  .home {
-    margin-right: 4px;
-
-    &::before {
-      background-image: url("../../assets/images/home-icon.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-  }
-
-  .work {
-    margin-left: 4px;
-
-    &::before {
-      background: url("../../assets/images/work-icon.svg") center no-repeat;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-  }
 }
 
 .current_location {
