@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { ReactComponent as BikeTabIcon } from 'assets/images/icon-bike.svg';
 import { ReactComponent as EbikeTabIcon } from 'assets/images/icon-bike-leaving.svg';
-import { ReactComponent as PedestrianTabIcon } from 'assets/images/trip-walk.svg';
+import { ReactComponent as PedestrianTabIcon } from 'assets/images/icon-trip-walk.svg';
 import RoutingItinerary from '../RoutingItinerary';
 import setSelectedVehicle from '../../actions/selectVehicle';
 
